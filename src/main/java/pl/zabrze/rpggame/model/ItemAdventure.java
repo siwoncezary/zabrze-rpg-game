@@ -12,4 +12,9 @@ public class ItemAdventure extends Adventure{
     public String description() {
         return "Znalazłeś cenny przedmiot: " + item.getName();
     }
+
+    @Override
+    public void accept(Hero hero) {
+        hero.getInventory().add(item);
+    }
 }

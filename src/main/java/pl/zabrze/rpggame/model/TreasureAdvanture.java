@@ -12,4 +12,9 @@ public class TreasureAdvanture extends Adventure{
     public String description() {
         return "Znalazłeś złoto w ilości: " + money;
     }
+
+    @Override
+    public void accept(Hero hero) {
+        hero.setMoney(hero.getMoney() + money);
+    }
 }

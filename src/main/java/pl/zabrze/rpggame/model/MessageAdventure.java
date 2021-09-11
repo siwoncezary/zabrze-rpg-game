@@ -12,4 +12,9 @@ public class MessageAdventure extends Adventure{
     public String description() {
         return message + " w " + getLocation();
     }
+
+    @Override
+    public void accept(Hero hero) {
+
+    }
 }

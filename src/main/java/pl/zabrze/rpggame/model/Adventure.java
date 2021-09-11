@@ -1,6 +1,6 @@
 package pl.zabrze.rpggame.model;
 
-abstract public class Adventure {
+abstract public class Adventure implements TakePart{
     private String content;
     private String location;
 

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import pl.zabrze.rpggame.model.Adventure;
 import pl.zabrze.rpggame.model.Hero;
 import pl.zabrze.rpggame.model.Item;
 import pl.zabrze.rpggame.model.Player;
@@ -25,6 +26,7 @@ public class GameController {
             new Item("Health potion", 2),
             new Item("Knife", 1)
     ));
+    Adventure lastAdventure;
 
     public GameController(AdventureService adventureService) {
         this.adventureService = adventureService;
@@ -51,4 +53,20 @@ public class GameController {
         return "redirect:/start";
     }
 
+    @GetMapping("/adventure")
+    public String infoAdventure(Model model){
+        lastAdventure = adventureService.randomAdventure();
+        model.addAttribute("adventure", lastAdventure);
+        return "/game/adventure-info";
+    }
+
+    @GetMapping("/takepart")
+    public String takePart(Model model){
+        if (lastAdventure == null){
+            return "redirect:/adventure";
+        }
+        lastAdventure.accept(hero);
+        model.addAttribute("hero", hero);
+        return "/game/hero-info";
+    }
 }

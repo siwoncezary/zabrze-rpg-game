@@ -13,8 +13,8 @@
 </ul>
 <h2>Posiadasz sztuk złota: ${hero.getMoney()}</h2>
 <p>Wybierz co chcesz robić?</p>
-<a href="/adventure?location=south">Idź na południe</a><br>
-<a href="/adventure?location=east">Idź na wschód</a><br>
+<a href="/adventure">Idź na południe</a><br>
+<a href="/adventure">Idź na wschód</a><br>
 <a href="/buy">Kup coś</a><br>
 <a href="/sell">Sprzedaj coś</a><br>
 <a href="/rumours">Posłuchaj plotek</a><br>

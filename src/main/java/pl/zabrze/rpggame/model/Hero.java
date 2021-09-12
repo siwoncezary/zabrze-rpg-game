@@ -7,6 +7,10 @@ public class Hero {
     private Player player;
     private List<Item> inventory;
     private int money;
+    private int healthLevel;
+    private int maxHealth;
+    private int experience;
+
 
     public Hero(String name, Player player, List<Item> inventory) {
         this.name = name;
@@ -37,5 +41,29 @@ public class Hero {
 
     public void setMoney(int money) {
         this.money = money;
+    }
+
+    public int getHealthLevel() {
+        return healthLevel;
+    }
+
+    public void setHealthLevel(int healthLevel) {
+        this.healthLevel = healthLevel;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public void setMaxHealth(int maxHealth) {
+        this.maxHealth = maxHealth;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
     }
 }

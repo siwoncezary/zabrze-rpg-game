@@ -38,14 +38,14 @@ public class GameController {
         return "/game/city";
     }
 
-    @GetMapping("/buy")
+    @GetMapping("/shop")
     public String buy(Model model){
         model.addAttribute("hero", hero);
         model.addAttribute("items", cityShop);
         return "/game/city-shop";
     }
 
-    @GetMapping("/buyitem")
+    @GetMapping("/buy")
     public String buyItem(@RequestParam int id){
         Item item = cityShop.remove(id);
         hero.setMoney(hero.getMoney() - item.getPrice());

@@ -15,7 +15,7 @@
 <p>Wybierz co chcesz robić?</p>
 <a href="/adventure">Idź na południe</a><br>
 <a href="/adventure">Idź na wschód</a><br>
-<a href="/buy">Kup coś</a><br>
+<a href="/shop">Kup coś</a><br>
 <a href="/sell">Sprzedaj coś</a><br>
 <a href="/rumours">Posłuchaj plotek</a><br>
 <a href="/">Koniec</a><br>

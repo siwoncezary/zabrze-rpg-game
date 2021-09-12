@@ -1,6 +1,6 @@
 package pl.zabrze.rpggame.model;
 
-public class Player {
+public class Player implements PlayerDTO{
     private String playerName;
     private int age;
     private String password;
